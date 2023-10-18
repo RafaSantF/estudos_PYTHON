@@ -1,5 +1,15 @@
-from Animal import *
+from Animal import Animal
 
-gato1 = Animal(20, "gato", 1.5)
+class Gato(Animal):
+    def __init__(self, peso, especie, aceleracao):
+        self.peso = peso
+        self.especie = especie
+        self.aceleracao = aceleracao
 
-gato1.andar(30)
+    def subirMuro(self):
+        if super.fadiga > 70:
+            print("O animal está muito cansado para subir um muro.")
+        else:
+            super.fadiga += 30 + super.peso/10
+            print("O animal está em cima de um muro. Muito cuidado ao descer!")
+            print("A fadiga total do animal está em {:.2f}".format(super.fadiga))
