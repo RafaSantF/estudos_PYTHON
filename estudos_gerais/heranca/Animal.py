@@ -15,7 +15,7 @@ class Animal():
         else:
             self.velocidade += intensidadeAcelerada/100 * self.aceleracao
             print("O animal está a {:.2f} m/s".format(self.velocidade))
-            self.fadiga += 10 + self.peso/10
+            self.fadiga += (10 * self.velocidade/10) + self.peso/10
             print("A fadiga total do animal está em {:.2f}".format(self.fadiga))
 
     def MovimentoRapido(self, intensidadeAcelerada):
@@ -26,7 +26,7 @@ class Animal():
         else:
             self.velocidade += intensidadeAcelerada/100 * self.aceleracao
             print("O animal está a {:.2f} m/s".format(self.velocidade))
-            self.fadiga += 20 + self.peso/10
+            self.fadiga += (20 * self.velocidade/10) + self.peso/10
             print("A fadiga total do animal está em {:.2f}".format(self.fadiga))
     
     def descansar(self, tempo):
@@ -34,4 +34,4 @@ class Animal():
             print("O animal já está denscansado.")
         else:    
             self.fadiga -= tempo
-            print("A fadiga total do animal está em {:.2f}".format(self.fadiga))
+            print("Desanso realizado. A fadiga total do animal está em {:.2f}".format(self.fadiga))
