@@ -3,14 +3,14 @@ import Gato
 import Peixe
 import Cachorro
 
-peixe1 = Peixe.Peixe(5, "Aquático", 5)
+peixe = Peixe.Peixe(5, "Aquático", 5)
 
-peixe1.movimentoLento(30)
+peixe.movimentoLento(30)
 
-peixe1.pularAgua(50) 
+peixe.pularAgua(30) 
 
-peixe1.movimentoLento(20)
-peixe1.MovimentoRapido(100)
-peixe1.MovimentoRapido(250)
-peixe1.MovimentoRapido(100)
-peixe1.descansar(70)
+peixe.movimentoLento(20)
+peixe.MovimentoRapido(100)
+peixe.MovimentoRapido(250)
+peixe.MovimentoRapido(100)
+peixe.descansar(70)
